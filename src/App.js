@@ -38,6 +38,12 @@ function App() {
           <span className="text-xl sm:text-2xl font-bold text-blue-700 tracking-wide">
   fitness tracker:Mern Project
 </span>
+<span
+    className="text-[10px] sm:text-xs tracking-wider italic text-gray-500"
+    style={{ fontFamily: "'EB Garamond', serif" }}
+  >
+    done by SANJAY.M,NAMANDIP RAJ,CHIRAG CHOUDHARY,SNEHIL KUMAR AMBER
+  </span>
 
           
         </div>
