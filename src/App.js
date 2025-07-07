@@ -81,7 +81,7 @@ function App() {
           </div>
         </div>
         <footer className="bg-white shadow mt-8 p-4 text-center text-gray-500 text-sm">
-  © 2025 ur.healthGPT. All rights reserved.
+  © 2025 fitness tracker:Mern Project All rights reserved.
 </footer>
 
       </div>
