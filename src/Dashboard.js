@@ -6,6 +6,8 @@ import CelebrationOverlay from './components/CelebrationOverlay';
 import FocusTimer from './components/FocusTimer';
 import MacroTracker from './components/MacroTracker';
 import MacroPieChart from './components/MacroPieChart';
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
 
 function Dashboard() {
   const [gender, setGender] = useState('male');
@@ -32,7 +34,7 @@ function Dashboard() {
 
   const fetchEntries = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/fitness', {
+      const res = await fetch(`${API_BASE_URL}/api/fitness`, {
         headers: { Authorization: token },
       });
       const data = await res.json();
@@ -56,13 +58,13 @@ function Dashboard() {
       const entryData = { weight, calories, steps, date };
       let res;
       if (editingId) {
-        res = await fetch(`http://localhost:5000/api/fitness/${editingId}`, {
+        res = await fetch(`${API_BASE_URL}/api/fitness/${editingId}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json', Authorization: token },
           body: JSON.stringify(entryData),
         });
       } else {
-        res = await fetch('http://localhost:5000/api/fitness', {
+        res = await fetch(`${API_BASE_URL}/api/fitness`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Authorization: token },
           body: JSON.stringify(entryData),
@@ -88,7 +90,7 @@ function Dashboard() {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this entry?')) return;
     try {
-      await fetch(`http://localhost:5000/api/fitness/${id}`, {
+      await fetch(`${API_BASE_URL}/api/fitness/${id}`, {
         method: 'DELETE',
         headers: { Authorization: token },
       });
