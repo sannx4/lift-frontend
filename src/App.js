@@ -35,12 +35,10 @@ function App() {
           <div className="max-w-5xl mx-auto flex items-center justify-center">
             {/* Brand + micro-tagline */}
             <div className="flex items-center gap-2">
-          <img
-            src={logo}
-            alt="ur.healthGPT logo"
-            className="h-10 w-auto sm:h-12 rounded"
-            draggable="false"
-          />
+          <span className="text-xl sm:text-2xl font-bold text-blue-700 tracking-wide">
+  fitness tracker:Mern Project
+</span>
+
           
         </div>
 
