@@ -31,7 +31,7 @@ function Login() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-blue-50">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center text-blue-700">Login to ur.healthGPT</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-blue-700">Login to fitness tracker</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="email"
